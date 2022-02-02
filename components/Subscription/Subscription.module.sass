@@ -1,0 +1,292 @@
+@import ../../styles/settings
+@import ../../styles/container
+
+.background 
+  background: linear-gradient(180deg, $white 0%, $lightGrey 100%)
+
+  .heading
+    margin: 0 auto
+    max-width: 660px
+    
+    .pageTitle 
+      transition: all $tr
+      margin-top: 34px
+      font-weight: 900
+      font-size: 45px
+      line-height: 120%
+      text-align: center
+      letter-spacing: 0.02em
+
+      +r(1199)
+        font-size: 28px
+
+    .option
+      margin-top: 24px
+
+      &:first-of-type
+        max-width: 430px
+        margin: 0 auto
+
+      .subTitle
+        font-weight: 900
+        width: 100%
+        height: 16px
+        margin: 0 auto
+        font-size: 16px
+        line-height: 15px
+        text-align: center
+        color: $darkGrey
+
+      .optionsList
+        display: flex
+        padding: 0
+        width: 100%
+        justify-content: space-around
+        list-style: none
+        align-items: center
+        text-align: center
+        font-weight: 900
+        font-size: 16px
+        line-height: 96%
+        border: 1px solid $greyLines
+
+        +r(991)
+          font-size: 13px
+
+        li
+          transition: all $tr
+          padding: 13px 0
+          width: 100%
+          height: 100%
+          overflow-wrap: break-word
+          list-style-position: inside
+
+          &:not(:last-child)
+            border-right: 1px solid $greyLines 
+
+          &:hover
+            background-color: $primary
+            color: $black
+            cursor: pointer
+
+        .selected
+          background-color: $primary
+          color: $black
+          cursor: pointer
+
+          &:first-child 
+            background-color: $primary
+            color: $black
+
+        &:not(:first-child) 
+          color: $darkGrey
+          background-color: $lightGrey   
+
+  .offerSection
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(313px, 1fr))
+    margin: 84px auto 0px auto
+    padding-bottom: 91px
+    justify-content: center
+    justify-items: center
+    max-width: 1380px
+    gap: 24px 
+    transition: all $tr
+    
+    &:last-child:nth-child(2n - 1)
+      grid-column-end: -1
+
+    +r(767)
+      margin: 40px auto 0 auto   
+      padding-bottom: 70px
+
+    .card
+      background-color: $white
+
+      .title
+        color: $black
+
+        +r(767)
+          color: $darkGrey
+
+      .features
+        color: $black
+
+    .cardExtra
+      background-color: $black  
+
+      .title
+        color: $white 
+      
+      .features
+        color: $white
+        margin: 0
+    
+    .card, .cardExtra
+      box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.08)
+      display: flex
+      flex-direction: column
+      align-items: center
+      padding: 50px 40px
+      border: 1px solid $greyLines 
+
+      +r(767)
+          min-width: 335px 
+          padding: 23px 40px
+          height: auto
+
+      +r(575)
+          min-width: 251px 
+
+      .img 
+        width: 104px
+
+        +r(991)
+          width: 80px
+
+        +r(767)
+          width: 58px
+
+      .arrow
+        cursor: pointer
+
+      .title
+        font-style: normal
+        font-weight: bold
+        margin: 13px 0 13px 0
+        font-size: 28px
+        line-height: 150%
+        text-align: center
+        letter-spacing: 0.02em
+
+        +r(991)
+          font-size: 23px
+
+        +r(767)
+          margin: 0
+          font-size: 14px
+          font-weight: normal
+      
+      .price         
+        color: $primaryDark
+        font-style: normal
+        font-weight: 900
+        font-size: 38px
+        height: 96px
+        margin: 0 0 7px 0
+        line-height: 140%
+        text-align: center
+        letter-spacing: 0.02em
+
+        +r(991)
+          height: 90px
+          font-size: 35px
+
+        +r(767)
+          height: auto
+          line-height: 150%
+          font-weight: 700
+          font-size: 21px
+
+        div
+          display: flex
+          justify-content: center
+          align-content: center
+          flex-direction: column
+
+          +r(767)
+            align-items: baseline
+            flex-direction: row
+
+          p
+            margin: 0
+
+          span
+            font-size: 20px
+
+            +r(767)
+              font-size: 16px      
+
+        span
+          display: block
+          line-height: 30px
+          font-size: 20px
+          font-weight: 400
+
+          +r(767)
+            display: inline
+            font-size: 14px
+            font-weight: 400
+        
+      .features 
+        margin: 34px 0 48px 0
+        padding: 38px 0 0 16px
+        border-top: 1px solid $greyLines
+        list-style: none
+
+        li
+          margin-bottom: 1em
+          font-style: normal
+          font-weight: bold
+          font-size: 18px
+          line-height: 140%
+          letter-spacing: -0.02em
+
+        ::before 
+          content: "\2022" 
+          color: $primary
+          display: inline-block
+          width: 1em
+          margin-left: -1em
+
+      .subButton, .buttonExtra
+        font-family: inherit
+        width: 220px
+        height: 60px
+        font-style: normal
+        font-weight: 900
+        font-size: 16px
+        line-height: 96%
+        color: $black
+        background-color: $primary
+        border: none
+        cursor: pointer
+        margin-top: auto
+        transition: all $tr
+
+        +r(767)
+          height: 40px
+          margin-bottom: 14px
+          height: 40px
+          font-size: 14px
+
+      .subButton
+        &:hover 
+          background-color: $primaryHover
+      
+      .buttonExtra
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $white
+        background-color: $black
+        border: 2px solid $white
+        
+        p
+          margin: 0          
+
+        &:hover 
+          background-color: $white
+          color: $black  
+          cursor: pointer
+          
+          .githubIcon
+            filter: invert(100%)
+
+        .githubIcon
+          margin-right: 10px
+          width: 16px
+        
+          +r(767)
+            left: 45px          
+    

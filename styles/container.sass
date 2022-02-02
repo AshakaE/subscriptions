@@ -1,0 +1,18 @@
+.container
+  margin: 0 auto
+  padding: 0 15px
+
+  &.large
+    max-width: 1200px
+
+  &.middle
+    max-width: 1000px
+
+  &.small
+    max-width: 800px
+
+  &.large, &.middle, &.small
+    +r(1199)
+      max-width: 960px
+    +r(991)
+      max-width: 100%

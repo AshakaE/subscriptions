@@ -1,0 +1,12 @@
+// please only use the following breakpoints
+  // normal style for 1200+ pixels screen sizes
+  // +r(1199) - for screen sizes from 992 to 1199 pixels
+  // +r(991) - for screen sizes from 768 to 991 pixels
+  // +r(767) - for screen sizes from 576 to 767 pixels
+  // +r(575) - for screen sizes from 451 to 575 pixels
+  // +r(450) - for screen sizes from 391 to 450 pixels
+  // +r(390) - for screen sizes from 320 to 390 pixels
+  
+@mixin r($size)
+  @media only screen and (max-width: $size + 'px')
+    @content
